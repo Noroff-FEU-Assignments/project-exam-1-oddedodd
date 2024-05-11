@@ -53,6 +53,11 @@ img.spinner {
   margin: 100px auto;
 }
 
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 /* 
 * Typography
 */
@@ -94,6 +99,10 @@ p {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background-color: var(--base-red);
+}
+
+.btn-full {
+  width: 100%;
 }
 
 /*
@@ -244,17 +253,62 @@ img.header-logo {
 }
 
 /*
-* Post page
+* Blog  page
 */
-.post-container {
+.blog-container {
   max-width: 900px;
-  margin: auto;
-  padding: 1rem;
 }
-.post-container img {
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: var(--base-dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.post-image img {
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.post-content a {
+  color: #fff;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+h1.blog-title {
+  font-size: 2rem;
+  font-family: var(--special-font);
+  margin-top: 50px;
+  margin-bottom: 2rem;
+}
+
+p.blog-intro {
+  margin-bottom: 50px;
+}
+
+/*
+* Single post page
+*/
+.post-container {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--base-dark-blue);
+}
+
+.post-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  height: auto;
 }
 .post-featured_image {
   width: 100%;
@@ -268,27 +322,29 @@ h1.post-title {
   margin-bottom: 1rem;
 }
 
-/* Style the modal (background) */
+/* 
+* Image modal
+*/
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 90vw;
+  object-fit: cover;
 }
 
 /* Caption of Modal Image */
@@ -320,7 +376,81 @@ footer {
   display: flex;
 }
 
-/* Responsive */
+/*
+* Contact form
+*/
+
+.contact-container {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--base-dark-blue);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: var(--base-red);
+}
+
+button {
+  background-color: var(--base-red);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.error {
+  color: var(--base-red);
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+/*
+* MEDIA QUERIES
+*/
+@media (min-width: 1024px) {
+  .post {
+    padding: 4px;
+  }
+
+  .post-image {
+    flex: 1 1 33%; /* Takes up one-third of the space */
+    padding: 10px;
+  }
+
+  .post-content {
+    flex: 2 1 67%; /* Takes up two-thirds of the space */
+    padding: 10px;
+  }
+}
+
+/*
+* Navigation is mobile first - find it easier this way
+*/
 @media only screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;

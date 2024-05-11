@@ -13,7 +13,7 @@ function getFeaturedPosts() {
           .source_url
       );
       postsTemplate += `
-        <div class="post card">
+        <div class="card">
           <img src="${posts[i]._embedded["wp:featuredmedia"]["0"].media_details.sizes.medium.source_url}" alt="${posts[i].title.rendered}" class="posts-card-image" />
           <h3 class="card-title"><a href="post.html?id=${posts[i].id}">${posts[i].title.rendered}</a></h2>
           <p>${posts[i].excerpt.rendered}</p>

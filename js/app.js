@@ -8,10 +8,3 @@ function mobileMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var images = document.querySelector(".wp-block-image");
-  images.forEach(function (image) {
-    image.classList.add("new-class");
-  });
-});
