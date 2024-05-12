@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isDown = true;
     startX = e.pageX - scrollContainer.offsetLeft;
     scrollLeft = scrollContainer.scrollLeft;
-    scrollContainer.style.scrollBehavior = "auto"; // Disable smooth scrolling on drag
+    scrollContainer.style.scrollBehavior = "auto";
   });
 
   scrollContainer.addEventListener("mouseleave", () => {
@@ -47,14 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   scrollContainer.addEventListener("mouseup", () => {
     isDown = false;
-    scrollContainer.style.scrollBehavior = "smooth"; // Re-enable smooth scrolling
+    scrollContainer.style.scrollBehavior = "smooth";
   });
 
   scrollContainer.addEventListener("mousemove", (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - scrollContainer.offsetLeft;
-    const walk = (x - startX) * 2; // the *2 is the speed of the drag, adjust as necessary
+    const walk = (x - startX) * 1.5;
     scrollContainer.scrollLeft = scrollLeft - walk;
   });
 });
