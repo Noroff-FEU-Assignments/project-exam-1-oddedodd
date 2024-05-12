@@ -8,7 +8,7 @@ function getFeaturedPosts() {
     let postsTemplateCarousel = "";
 
     // Display the first 5 posts
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       console.log(
         posts[i]._embedded["wp:featuredmedia"]["0"].media_details.sizes.medium
           .source_url

@@ -481,8 +481,8 @@ button {
 */
 @media only screen and (max-width: 768px) {
   .nav-menu {
-    position: fixed;
-    z-index: 1000;
+    position: absolute;
+    z-index: 99999;
     left: -100%;
     top: 4rem;
     flex-direction: column;
