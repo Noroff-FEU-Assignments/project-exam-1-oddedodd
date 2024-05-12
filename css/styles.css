@@ -110,6 +110,7 @@ p {
 .header {
   background-color: #fff;
   border-bottom: 1px solid #e2e8f0;
+  width: 100%;
 }
 
 nav {
@@ -210,10 +211,15 @@ img.header-logo {
 .scrolling-wrapper {
   -webkit-overflow-scrolling: touch;
 }
-.scrolling-wrapper {
-  &::-webkit-scrollbar {
-    display: none;
-  }
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-wrapper:hover {
+  cursor: grab;
+}
+.scrolling-wrapper:active {
+  cursor: grabbing;
 }
 
 .featured_posts-container {
@@ -252,7 +258,7 @@ img.header-logo {
 }
 
 /*
-* Blog  page
+* Blog page
 */
 .blog-container {
   max-width: 900px;
@@ -511,5 +517,9 @@ button {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+  header.active {
+    position: fixed;
+    top: 0;
   }
 }
