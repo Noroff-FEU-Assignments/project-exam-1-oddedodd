@@ -55,7 +55,6 @@ img.spinner {
 
 img {
   max-width: 100%;
-  border-radius: 10px;
 }
 
 /* 
@@ -427,6 +426,29 @@ button {
   color: var(--base-red);
   font-size: 0.8em;
   margin-bottom: 10px;
+}
+
+/*
+* About page
+*/
+
+.about-container {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--base-dark-blue);
+}
+
+.about-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.about-cta a {
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 /*

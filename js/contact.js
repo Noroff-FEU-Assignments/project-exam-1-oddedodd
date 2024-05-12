@@ -1,16 +1,17 @@
+// rund code after the page has loaded
 document.addEventListener("DOMContentLoaded", function () {
-  var form = document.querySelector("#contactForm");
-  var nameInput = document.querySelector("#name");
-  var emailInput = document.querySelector("#email");
-  var subjectInput = document.querySelector("#subject");
-  var messageInput = document.querySelector("#message");
-  var submitButton = form.querySelector("button");
+  let form = document.querySelector("#contactForm");
+  let nameInput = document.querySelector("#name");
+  let emailInput = document.querySelector("#email");
+  let subjectInput = document.querySelector("#subject");
+  let messageInput = document.querySelector("#message");
+  let submitButton = form.querySelector("button");
 
   function validateInput() {
     // Doing real-time validation of the fields
-    if (nameInput.value.length <= 5) {
+    if (nameInput.value.length < 5) {
       document.querySelector("#nameError").textContent =
-        "Name should be more than 5 characters long.";
+        "Name must be more than 5 characters long.";
     } else {
       document.querySelector("#nameError").textContent = "";
     }
@@ -22,16 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#emailError").textContent = "";
     }
 
-    if (subjectInput.value.length <= 15) {
+    if (subjectInput.value.length < 15) {
       document.querySelector("#subjectError").textContent =
-        "Subject should be more than 15 characters long.";
+        "Subject must be more than 15 characters long.";
     } else {
       document.querySelector("#subjectError").textContent = "";
     }
 
-    if (messageInput.value.length <= 25) {
+    if (messageInput.value.length < 25) {
       document.querySelector("#messageError").textContent =
-        "Message content should be more than 25 characters long.";
+        "Message content must be more than 25 characters long.";
     } else {
       document.querySelector("#messageError").textContent = "";
     }

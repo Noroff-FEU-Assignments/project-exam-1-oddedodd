@@ -2,6 +2,7 @@ import { connectToApi, apiUrl } from "./api.js";
 
 const postContainer = document.querySelector(".post-container");
 const documentTitle = document.querySelector("title");
+let metaDescription = document.querySelector('meta[name="description"]');
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -11,7 +12,12 @@ async function displayPost() {
   connectToApi(apiUrl + id + "?_embed").then((post) => {
     let postTemplate = `<h1 class="post-title">${post.title.rendered}</h1> ${post.content.rendered}`;
     postContainer.innerHTML = postTemplate;
+    // set the document title and meta description
     documentTitle.innerHTML = post.title.rendered + " - Retro Oddities";
+    metaDescription.setAttribute(
+      "content",
+      post.excerpt.rendered.replace(/<\/?[^>]+(>|$)/g, "")
+    );
 
     // get all images in the post and add a click event to display them in a modal
     document.querySelectorAll(".post-container img").forEach((img) => {
