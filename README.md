@@ -1,68 +1,66 @@
-## Project Exam 1
+# Retro Oddities
 
-## Goal
+![image](https://oddedodd-portfolio.netlify.app/images/retro-oddities.jpg)
 
-To put into practice the skills learned over your first year of studies.
+NOROFF - Project Exam 1
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## Description
 
-### Home Page
+Project Exam 1 in Front End Development at Noroff School of Technology and Digital Media was a comprehensive endeavor that involved crafting an engaging and informative blog about old computers and games. This project uses data retrieved from the WordPress API, allowing for a dynamic and content-rich experience.
 
-The home page should feature a 'Latest Posts' section, designed as a carousel (slider) for the desktop version. As an example, you could display four posts at a time, although you're welcome to adjust this number to better suit your design. Users should be able to click an arrow on the right to scroll through to the next set of posts, and an arrow on the left to view the previous set. For the mobile version, you are free to alter the layout as you deem appropriate, without being tied to a carousel format.
+Throughout this project, I had to leverage all the skills and knowledge I had acquired over the past year. The foundation of the website was built using HTML and CSS, where I applied my understanding of web standards and responsive design principles to ensure the site was accessible and visually appealing on various devices. The use of JavaScript was crucial in adding interactive elements that enhanced user engagement, such as dynamic content loading, interactive galleries, etc.
 
-### Blog Page
+In addition to technical skills, this project required an understanding of content management systems. Using the WordPress API, I was able to efficiently manage and organize the content needed for the blog, ensuring that it was both easy to update and navigate. This involved setting up a backend structure, handling API requests, and integrating the content seamlessly into the front-end design.
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+Furthermore, this project was not just a test of technical abilities but also of creative and strategic thinking. I had to design a user interface that would attract and retain visitors, making the exploration of old computers and games both informative and enjoyable. This included choosing appropriate color schemes, typography, and layout structures that reflected the nostalgic theme of the blog while maintaining modern usability standards.
 
-### Blog Specific Page
+Overall, this project was a culmination of my learning journey over the past year, bringing together design, development, and content management skills into a single, cohesive, and engaging website. It demonstrated my ability to handle complex projects and create professional-quality web applications that meet both user needs and technical requirements.
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
 
-If images on the blog specific page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+## Built With
 
-### Contact page
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+- HTML
+- CSS
+- JavaScript
+- WordPress (API)
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+## Getting Started
 
-### WordPress
+### Installing
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+This is how you download and install this project on your computer or server
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+1. Open the terminal and go to the directory where you want to install
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+```sh
+cd your-folder
+```
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+2. Clone the repo
 
-## Level 1 Process
+```sh
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-oddedodd
+```
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+3. Change The APIURLs in the css/api.js file to match your WordPress installs (local and production)
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+## Contributing
 
+If you’d like to help improve this project, please fork the repository and submit a pull request.
+
+1.	Fork the project.
+2.	Create your feature branch: git checkout -b feature/my-feature
+3.	Commit your changes: git commit -m 'Add My Feature'
+4.	Push to the branch: git push origin feature/my-featur
+5.	Open a pull request.
+
+## Contact
+
+Odd Egil Hegge Selnes - [post@odde.org](mailto:post@odde.org) 
+
+[Follow me on Twitter](https://www.twitter.com/oddedodd)
+
+[Follow me on Instagram](https://www.instagram.com/oddedodd/)
+
+[Add me on LinkedIn](https://www.linkedin.com/in/oddegilhselnes/)
